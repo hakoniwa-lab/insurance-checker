@@ -1,0 +1,171 @@
+const INSURANCES = [
+  {
+    "id": "death-coverage-life-insurance",
+    "name": "死亡保障(生命保険)",
+    "category": "生命保険",
+    "summary": "自分に万が一のことがあった場合に、遺された家族の生活費・教育費をまかなうための保険。扶養家族がいる人ほど重要度が高い。",
+    "feature_text": "配偶者・子どもなど扶養家族の生活を経済的に守る保障",
+    "fit_text": "結婚している、子どもがいる、住宅ローンを組んでいるなど、自分の収入に家族の生活がかかっている人向け",
+    "conditions_text": "独身で扶養家族がいない場合は、死亡保障より医療保障・就業不能保障の優先度が高いことが多い。",
+    "tags": {
+      "concern": ["death_coverage"],
+      "life_stage": ["married_no_kids", "raising_kids", "homeowner"],
+      "employment_status": [],
+      "age_range": []
+    },
+    "related_offers": [
+      {
+        "label": "保険マンモスでFPに無料相談する",
+        "url": "https://px.a8.net/svt/ejp?a8mat=45DYA9+92V95E+5SIO+5YJRM",
+        "type": "affiliate"
+      }
+    ],
+    "links_to_subsidy_checker": false,
+    "priority": 1
+  },
+  {
+    "id": "medical-insurance",
+    "name": "医療保険",
+    "category": "医療保険",
+    "summary": "病気やケガで入院・手術した際の自己負担を補う保険。高額療養費制度でカバーしきれない差額ベッド代・食事代等に備える。",
+    "feature_text": "入院・手術時の自己負担や、高額療養費制度の対象外費用をカバー",
+    "fit_text": "公的医療保険だけでは不安な人、貯蓄で備えるのが難しい人向け",
+    "conditions_text": "高額療養費制度がある分、貯蓄が十分にあれば必須ではないという考え方もある。過剰な保障になっていないか要確認。",
+    "tags": {
+      "concern": ["medical_coverage"],
+      "life_stage": [],
+      "employment_status": [],
+      "age_range": []
+    },
+    "related_offers": [
+      {
+        "label": "保険マンモスでFPに無料相談する",
+        "url": "https://px.a8.net/svt/ejp?a8mat=45DYA9+92V95E+5SIO+5YJRM",
+        "type": "affiliate"
+      }
+    ],
+    "links_to_subsidy_checker": true,
+    "priority": 1
+  },
+  {
+    "id": "income-protection-insurance",
+    "name": "就業不能保険",
+    "category": "就業不能保険",
+    "summary": "病気やケガで長期間働けなくなった際の収入減少に備える保険。自営業・フリーランスは会社員のような傷病手当金がないため、特に検討価値が高い。",
+    "feature_text": "働けない期間の収入減少を補う保障",
+    "fit_text": "自営業・フリーランスなど、傷病手当金の対象外で収入がすぐ途絶えるリスクがある人向け",
+    "conditions_text": "会社員は傷病手当金(標準報酬日額の2/3を最長1年6か月)があるため、就業不能保険は補完的な位置づけになる。自営業・フリーランスは公的保障が薄い分、優先度が上がる。",
+    "tags": {
+      "concern": ["income_protection"],
+      "life_stage": [],
+      "employment_status": ["self_employed"],
+      "age_range": []
+    },
+    "related_offers": [
+      {
+        "label": "保険マンモスでFPに無料相談する",
+        "url": "https://px.a8.net/svt/ejp?a8mat=45DYA9+92V95E+5SIO+5YJRM",
+        "type": "affiliate"
+      }
+    ],
+    "links_to_subsidy_checker": true,
+    "priority": 1
+  },
+  {
+    "id": "cancer-insurance",
+    "name": "がん保険",
+    "category": "がん保険",
+    "summary": "がんの診断・治療にかかる費用(先進医療や自由診療、長期の通院費用等)に備える保険。指定難病医療費助成の対象外となる費用への備えとしても検討される。",
+    "feature_text": "がん診断時の一時金や、長期治療・先進医療費用への備え",
+    "fit_text": "家系的にがんが心配、公的制度でカバーされない治療も選択肢に残しておきたい人向け",
+    "conditions_text": "高額療養費制度・医療費控除である程度はカバーされるため、先進医療や自由診療まで備えたいかどうかで必要性が変わる。",
+    "tags": {
+      "concern": ["cancer_coverage"],
+      "life_stage": [],
+      "employment_status": [],
+      "age_range": []
+    },
+    "related_offers": [
+      {
+        "label": "保険マンモスでFPに無料相談する",
+        "url": "https://px.a8.net/svt/ejp?a8mat=45DYA9+92V95E+5SIO+5YJRM",
+        "type": "affiliate"
+      }
+    ],
+    "links_to_subsidy_checker": true,
+    "priority": 2
+  },
+  {
+    "id": "education-savings-insurance",
+    "name": "学資保険・こども保険",
+    "category": "学資保険",
+    "summary": "子どもの進学費用を計画的に準備するための保険。契約者(親)に万が一のことがあった場合、以後の保険料が免除される保障も付帯することが多い。",
+    "feature_text": "進学費用の計画的な準備+契約者に万が一の際の保険料免除",
+    "fit_text": "妊娠中・子育て中で、将来の教育費を今のうちから準備したい人向け",
+    "conditions_text": "貯蓄性商品のため、途中解約すると元本割れする場合がある。NISA等での積立と比較検討することも多い。",
+    "tags": {
+      "concern": ["education_savings"],
+      "life_stage": ["raising_kids"],
+      "employment_status": [],
+      "age_range": []
+    },
+    "related_offers": [
+      {
+        "label": "ベビープラネットで保険を無料相談する",
+        "url": "https://px.a8.net/svt/ejp?a8mat=4B8DGS+IGPSI+503M+5YZ77",
+        "type": "affiliate"
+      }
+    ],
+    "links_to_subsidy_checker": true,
+    "priority": 1
+  },
+  {
+    "id": "asset-building-consultation",
+    "name": "資産形成・NISA/iDeCo相談",
+    "category": "資産形成",
+    "summary": "保険とは別に、つみたてNISA・iDeCo等を使った将来の資産形成について、家計全体を踏まえてFPに相談する。",
+    "feature_text": "保険と貯蓄・投資のバランスを踏まえた家計全体の相談",
+    "fit_text": "保険だけでなく、将来のお金の準備全体を見直したい人向け",
+    "conditions_text": "投資商品の勧誘を目的としたものではなく、あくまで家計相談の一環として利用する想定。",
+    "tags": {
+      "concern": ["asset_building"],
+      "life_stage": [],
+      "employment_status": [],
+      "age_range": []
+    },
+    "related_offers": [
+      {
+        "label": "保険マンモスでFPに無料相談する",
+        "url": "https://px.a8.net/svt/ejp?a8mat=45DYA9+92V95E+5SIO+5YJRM",
+        "type": "affiliate"
+      }
+    ],
+    "links_to_subsidy_checker": false,
+    "priority": 2
+  },
+  {
+    "id": "homemaker-coverage",
+    "name": "専業主婦(主夫)向けの保障の考え方",
+    "category": "専業主婦(主夫)保障",
+    "summary": "収入がない、または少ない専業主婦(主夫)本人の保障をどう考えるか。家事・育児を担う人が入院・就業不能になった際の家事代行費用等も考慮する。",
+    "feature_text": "収入がなくても、入院・介護時の家事代行費用等をカバーする考え方",
+    "fit_text": "専業主婦(主夫)で、自分自身の保障が手薄になっていないか気になる人向け",
+    "conditions_text": "収入補償という観点では優先度が下がりがちだが、家事・育児を代替する費用(家事代行・一時保育等)の観点で保障を検討する価値がある。",
+    "tags": {
+      "concern": [],
+      "life_stage": ["raising_kids"],
+      "employment_status": ["homemaker"],
+      "age_range": []
+    },
+    "related_offers": [
+      {
+        "label": "ベビープラネットで保険を無料相談する",
+        "url": "https://px.a8.net/svt/ejp?a8mat=4B8DGS+IGPSI+503M+5YZ77",
+        "type": "affiliate"
+      }
+    ],
+    "links_to_subsidy_checker": false,
+    "priority": 2
+  }
+]
+;
