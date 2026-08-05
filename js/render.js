@@ -27,6 +27,15 @@ function buildOfferLinks(item) {
 }
 
 function buildCrossLinkBanner(item, answers) {
+  if (item.id === "death-coverage-life-insurance") {
+    return `<a class="cross-link-banner" href="../subsidy-checker/">扶養家族の生活を支える公的な給付金・助成制度もあわせて給付金・補助金診断で確認できます →</a>`;
+  }
+  if (item.id === "asset-building-consultation") {
+    return `<a class="cross-link-banner" href="../takehome-calculator/">資産形成の前に、まず自分の手取り年収を手取り年収シミュレーターで確認する →</a>`;
+  }
+  if (item.id === "homemaker-coverage") {
+    return `<a class="cross-link-banner" href="../sidejob-checker/">収入面が気になる方は、無理なく始められる副業ジャンルを副業ジャンル診断で確認できます →</a>`;
+  }
   if (!item.links_to_subsidy_checker) return "";
   if (item.id === "income-protection-insurance" && answers && answers.employment_status === "self_employed") {
     return `<a class="cross-link-banner" href="../subsidy-checker/">自営業・フリーランスの方は傷病手当金が対象外です。使える公的制度を給付金・補助金診断で確認する →</a>`;
