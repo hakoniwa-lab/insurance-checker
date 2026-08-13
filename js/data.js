@@ -143,6 +143,11 @@ const INSURANCES = [
         "label": "保険マンモスでFPに無料相談する",
         "url": "https://px.a8.net/svt/ejp?a8mat=45DYA9+92V95E+5SIO+5YJRM",
         "type": "affiliate"
+      },
+      {
+        "label": "マネーのプロにFP無料相談する(ハーゲンダッツギフト券プレゼント)",
+        "url": "https://px.a8.net/svt/ejp?a8mat=4B8DGT+864EVM+5MAS+5ZEMQ",
+        "type": "affiliate"
       }
     ],
     "links_to_subsidy_checker": false,
