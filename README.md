@@ -53,6 +53,10 @@ insurance-checker/
 
 各カテゴリの `related_offers` フィールド(`{label, url, type}`形式のオブジェクト配列)に追加すると、結果カードに「PR」バッジ付きボタンが自動表示される(`js/render.js`の`buildOfferLinks`)。2026-07-31初期実装時点で、subsidy-checkerで既に承認済みのA8.net案件2件(保険マンモス・ベビープラネット)を流用。がん保険専門(baby planet)・資産相談(マネードクター)等、他の候補は審査待ち。
 
+2026-09-20、「ほけんNaviせつやくん」(株式会社フィナンシャル・エージェンシー、FP訪問の無料相談、A8 s00000027771001・無料相談完了13,000円)を
+死亡保障・医療・就業不能・資産形成の4カテゴリに追加。**A8は審査中**なので承認までは `type: "official"`(公式サイト setsuyakun-hoken.com/fp/ へのリンク。PR表記と sponsored を付けない)。
+承認されたら A8 のリンクに替えて `type` を `affiliate` に戻す。同日、自動解除されていた保険見直し本舗・マネードクター・ガーデン(学資・貯蓄)も再申込済み(審査中)。
+
 `links_to_subsidy_checker: true`のカテゴリは、結果カードに`subsidy-checker`への相対リンク(`../subsidy-checker/`)を表示する(`js/render.js`の`buildCrossLinkBanner`)。特に`income-protection-insurance`(就業不能保険)で`employment_status`が`self_employed`の場合は、「自営業・フリーランスは傷病手当金が対象外」という具体的な文言に出し分ける。
 
 現時点では他3アプリからinsurance-checkerへの逆方向クロスリンクは未実装(必要になれば追加)。
